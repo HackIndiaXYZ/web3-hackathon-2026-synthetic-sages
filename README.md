@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkillChain AI
 
-## Getting Started
+## Problem Statement
 
-First, run the development server:
+Traditional resumes and certificates do not accurately verify a candidate's real-world skills. Recruiters spend significant time validating claims, while talented developers struggle to prove their abilities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Solution
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+SkillChain AI is an AI-powered credential verification platform that analyzes a developer's GitHub profile, evaluates demonstrated skills, and generates verifiable digital credentials.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The platform helps:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Developers showcase verified skills
+* Recruiters discover qualified candidates faster
+* Organizations reduce credential fraud
 
-## Learn More
+## Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### AI Skill Assessment
+* Analyzes GitHub repositories
+* Evaluates technical proficiency
+* Generates skill insights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Digital Credentials
+* Creates verifiable credentials
+* Provides proof of achievement
+* Enables easy sharing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Recruiter Portal
+* Search and evaluate candidates
+* Verify credentials instantly
+* View skill assessments
 
-## Deploy on Vercel
+### Credential Verification
+* Validate issued credentials
+* Ensure authenticity
+* Reduce hiring risk
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Gemini AI
+* Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Live Demo
+skillchain-ai-bay.vercel.app
+
+## Team
+Synthetic Sages
+
+## Future Scope
+* Blockchain-backed credentials
+* Multi-platform developer analysis
+* Advanced recruiter analytics
+* Enterprise hiring integrations
