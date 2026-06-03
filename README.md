@@ -44,14 +44,16 @@ The platform helps:
 * Gemini AI
 * Vercel
 
-## Live Demo
-skillchain-ai-bay.vercel.app
-
-## Team
-Synthetic Sages
-
 ## Future Scope
 * Blockchain-backed credentials
 * Multi-platform developer analysis
 * Advanced recruiter analytics
 * Enterprise hiring integrations
+
+## Live Demo
+https://skillchain-ai-bay.vercel.app
+
+## Submission
+HackIndia Web3 Hackathon 2026
+
+Team: Synthetic Sages
