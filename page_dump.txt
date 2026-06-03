@@ -1,0 +1,220 @@
+{/* --- MESH GRADIENT BACKGROUNDS --- */}
+  <div className="fixed inset-0 z-0">
+    <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px]" />
+    <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px]" />
+  </div>
+
+  {/* --- NAVIGATION --- */}
+  <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-[#020617]/80 backdrop-blur-md">
+    <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="flex items-center gap-2">
+        <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-emerald-400 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <Layers size={18} className="text-white" />
+        </div>
+        <span className="text-xl font-bold tracking-tighter">SkillChain <span className="text-indigo-400">AI</span></span>
+      </div>
+      
+      <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <a href="#features" className="hover:text-white transition-colors">Features</a>
+        <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
+        <a href="#demo" className="hover:text-white transition-colors">Explorer</a>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <button className="hidden sm:block text-sm font-bold text-slate-400 hover:text-white transition-colors">Sign In</button>
+        <button className="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-sm font-bold transition-all shadow-lg shadow-indigo-600/20">
+          Launch App
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  {/* --- HERO SECTION --- */}
+  <section className="relative pt-40 pb-24 px-6 z-10">
+    <div className="max-w-7xl mx-auto text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-bold uppercase tracking-widest mb-8"
+      >
+        <Zap size={14} className="fill-current" /> Next-Gen Skill Verification
+      </motion.div>
+      
+      <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1.05]"
+      >
+        Trust <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-emerald-400">Skills</span>. <br />
+        Not Resumes.
+      </motion.h1>
+      
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed"
+      >
+        AI-powered blockchain credentials for the next generation workforce. 
+        Instantly verify developer DNA with zero manual checks.
+      </motion.p>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+      >
+        <button className="w-full sm:w-auto px-10 py-4 bg-indigo-600 rounded-2xl font-bold text-lg hover:bg-indigo-500 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2 group">
+          Verify My GitHub <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+        </button>
+        <button className="w-full sm:w-auto px-10 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold text-lg hover:bg-white/10 backdrop-blur-md transition-all flex items-center justify-center gap-2">
+          <Search size={20} /> Recruiter Portal
+        </button>
+      </motion.div>
+
+      {/* Social Proof Stats */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-white/5 bg-white/[0.02] rounded-3xl"
+      >
+        {[
+          { label: "AI Audits Conducted", value: "48,000+" },
+          { label: "On-Chain Passports", value: "12,250" },
+          { label: "Verification Accuracy", value: "99.8%" },
+          { label: "Gas Saved", value: "94%" },
+        ].map((stat, i) => (
+          <div key={i} className="px-4">
+            <div className="text-3xl font-black text-white mb-1">{stat.value}</div>
+            <div className="text-[10px] text-slate-500 uppercase tracking-widest font-black">{stat.label}</div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  </section>
+
+  {/* --- FEATURES SECTION --- */}
+  <section id="features" className="py-32 px-6 relative z-10">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-20">
+        <motion.h2 {...fadeInUp} className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Intelligence meets Identity</motion.h2>
+        <motion.p {...fadeInUp} transition={{ delay: 0.1 }} className="text-slate-400 max-w-xl mx-auto">Our stack uses Gemini 2.5 Pro to audit codebases and Polygon to secure the results forever.</p>
+      </div>
+
+      <motion.div 
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="whileInView"
+        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
+        {[
+          {
+            icon: <Cpu className="text-indigo-400" />,
+            title: "AI Skill Auditing",
+            desc: "Goes beyond keywords. Our AI analyzes commit patterns, code complexity, and technical decision-making."
+          },
+          {
+            icon: <ShieldCheck className="text-emerald-400" />,
+            title: "Tamper-Proof Proof",
+            desc: "Verified results are minted to Polygon as soul-bound credentials that can never be faked or altered."
+          },
+          {
+            icon: <Award className="text-purple-400" />,
+            title: "Real-time Scoring",
+            desc: "Your Skill Score (SS) evolves as you contribute to projects, keeping your profile always up to date."
+          }
+        ].map((feature, i) => (
+          <motion.div 
+            key={i}
+            variants={fadeInUp}
+            whileHover={{ y: -10 }}
+            className="p-10 rounded-[2.5rem] bg-white/[0.03] border border-white/10 hover:border-indigo-500/50 transition-all group relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-3xl -mr-16 -mt-16 group-hover:bg-indigo-500/10 transition-colors" />
+            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform border border-white/5">
+              {feature.icon}
+            </div>
+            <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+            <p className="text-slate-400 leading-relaxed">{feature.desc}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  </section>
+
+  {/* --- HOW IT WORKS --- */}
+  <section id="how-it-works" className="py-32 px-6 bg-white/[0.01] relative z-10">
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <motion.div {...fadeInUp}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">From GitHub to <br />On-Chain in Seconds</h2>
+          <div className="space-y-12">
+            {[
+              { step: "01", title: "Connect Profile", desc: "Link your GitHub and LinkedIn. Our AI begins a non-invasive audit of your public contributions." },
+              { step: "02", title: "AI Analysis", desc: "Gemini audits code quality, tech-stack proficiency, and project impact to generate your Skill Passport." },
+              { step: "03", title: "Mint & Share", desc: "Deploy your verified credentials to the Polygon network. Share a unique link with any employer." }
+            ].map((item, i) => (
+              <div key={i} className="flex gap-8 group">
+                <span className="text-5xl font-black text-white/5 group-hover:text-indigo-500/20 transition-colors">{item.step}</span>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">{item.title}</h4>
+                  <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+        
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          <div className="absolute inset-0 bg-indigo-500/10 rounded-[4rem] blur-3xl transform rotate-3" />
+          <div className="relative glass-panel border border-white/10 p-8 rounded-[3rem] bg-[#0f172a]/50 backdrop-blur-xl shadow-2xl">
+            <div className="flex items-center justify-between mb-10">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 p-[2px]">
+                  <div className="w-full h-full bg-[#020617] rounded-full flex items-center justify-center font-bold text-xs uppercase tracking-tighter">AI</div>
+                </div>
+                <div>
+                  <div className="text-sm font-bold uppercase tracking-wider text-indigo-400">Skill Radar v2.0</div>
+                  <div className="text-[10px] text-slate-500 font-mono">STATUS: SYNCED_ON_CHAIN</div>
+                </div>
+              </div>
+              <div className="px-4 py-1 bg-emerald-500/10 text-emerald-400 text-[10px] font-black rounded-full border border-emerald-500/20 uppercase tracking-widest">
+                Verified
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                { label: "Frontend Architecture", score: "94%" },
+                { label: "Smart Contract Logic", score: "88%" },
+                { label: "System Design", score: "91%" },
+              ].map((skill, i) => (
+                <div key={i}>
+                  <div className="flex justify-between text-xs font-bold mb-2 uppercase tracking-tighter">
+                    <span className="text-slate-300">{skill.label}</span>
+                    <span className="text-indigo-400">{skill.score}</span>
+                  </div>
+                  <div className="h-2 bg-white/5 rounded-full overflow-hidden border border-white/5">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      whileInView={{ width: skill.score }}
+                      transition={{ duration: 1.5, delay: 0.5 }}
+                      className="h-full bg-gradient-to-r from-indigo-500 to-purple-500" 
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-white/5 flex items-center justify-between">
+               <div className="flex -space-x-2">
+                 {[1,2,3].map(j => <div key={j} className="w-8 h-8 rounded-full bg-slate-800 border-2 border-[#020617]" />)}
+                 <div className="w-8 h-8 rounded-full bg-indigo-600 border-2 border-[#020617] flex items-center justify-center text-[10px] font-bold">+12</div>
