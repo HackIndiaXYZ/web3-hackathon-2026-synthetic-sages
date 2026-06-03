@@ -165,3 +165,7 @@ Meemansa Dwivedi
 
 MIT License
 
+## 👥 Team
+
+- Aashish Pandey
+- Meemansa Dwivedi
