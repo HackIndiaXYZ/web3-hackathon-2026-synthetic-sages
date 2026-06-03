@@ -73,13 +73,25 @@ const Navbar = () => {
             className="md:hidden bg-slate-900 border-b border-white/10 px-4 py-6 space-y-4"
           >
             {['Protocol', 'Validation', 'Ecosystem', 'Docs'].map((item) => (
-              <a key={item} href="#" className="text-slate-300 block text-lg font-medium">
-                {item}
-              </a>
-            ))}
-            <button className="w-full bg-cyan-500 text-slate-950 py-4 rounded-xl font-bold">
-              Launch App
-            </button>
+  <a key={item} href="#" className="text-slate-300 block text-lg font-medium">
+    {item}
+  </a>
+))}
+
+<Link
+  href="/recruiter"
+  className="block w-full text-center border border-cyan-500 text-cyan-400 py-4 rounded-xl font-bold"
+>
+  Recruiter Portal
+</Link>
+
+<Link
+  href="/validate"
+  className="block w-full text-center bg-cyan-500 text-slate-950 py-4 rounded-xl font-bold"
+>
+  Launch App
+</Link>
+            
           </motion.div>
         )}
       </AnimatePresence>
@@ -111,7 +123,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-44 pb-32 overflow-hidden">
+        <section className="relative pt-28 md:pt-44 pb-20 md:pb-32 overflow-hidden">
           {/* Animated Background Gradients */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
             <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-blue-600/10 blur-[140px] rounded-full animate-pulse" />
@@ -134,7 +146,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8 leading-[0.9]"
+                className="text-4xl sm:text-5xl md:text-8xl font-black tracking-tighter text-white mb-6 md:mb-8 leading-tight"
               >
                 VERIFY SKILLS<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500">
